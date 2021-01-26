@@ -29,11 +29,12 @@ before_install:
 - brew update > /dev/null || true
 - brew tap homebrew/cask
 - brew tap AdoptOpenJDK/openjdk
-- brew unlink python@2
+- brew install python@3
 - pip install --user awscli
 - mkdir -p $TRAVIS_BUILD_DIR/build_artifacts
 
 install:
+- brew unlink python@2
 - brew uninstall --cask java > /dev/null
 - brew install --cask adoptopenjdk8 > /dev/null
 - brew install ninja
