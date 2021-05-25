@@ -77,6 +77,14 @@ public class Main : MonoBehaviour
 		ApplicationNotResponding.GetComponent<Button>().onClick.AddListener(OnApplicationNotRespondingClick);
 		OutOfMemory.GetComponent<Button>().onClick.AddListener(OnOutOfMemoryClick);
 		AppHang.GetComponent<Button>().onClick.AddListener(OnAppHangClick);
+
+		//OnLogClick();
+		//OnLogWarningClick();
+		//OnLogErrorClick();
+		//OnLogExceptionClick();
+		//OnBugsnagNotifyClick();
+
+		OnOutOfMemoryClick();
 	}
 
 	private void OnManagedCrashClick()
@@ -100,7 +108,7 @@ public class Main : MonoBehaviour
 	{
 		Debug.LogException(new Exception("Sent an exception to Debug.LogException"));
 	}
-	
+
 
 	private void OnLogErrorClick()
 	{
@@ -175,7 +183,7 @@ public class Main : MonoBehaviour
 #else
 		WarnPlatformNotSupported();
 #endif
-	
+
 	}
 
 	private void OnOutOfMemoryClick()
@@ -221,3 +229,4 @@ public class Main : MonoBehaviour
 #endif
 	}
 }
+
