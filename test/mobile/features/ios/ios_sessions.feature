@@ -1,6 +1,5 @@
 Feature: iOS smoke tests for sessions
 
-    # TODO: Failing steps commented out pending full implementation of PLAT-6372
     Background:
         Given I wait for the game to start
 

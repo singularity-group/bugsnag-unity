@@ -1,13 +1,10 @@
 When("I wait for the game to start") do
-  # Wait for a fixed time period
-  # TODO: PLAT-6655 Remove the Unity splash screen so we don't have to wait so long
-  sleep 10
+  wait_for_game_start
 end
 
 When('I relaunch the Unity app') do
   Maze.driver.launch_app
-  # Wait for a fixed time period
-  sleep 10
+  wait_for_game_start
 end
 
 When("I tap the {string} button") do |button|
@@ -34,6 +31,10 @@ When("I tap the {string} button") do |button|
   when "Change scene"
     press_at center, 750
   end
+end
+
+def wait_for_game_start
+  sleep 7
 end
 
 def press_at(x, y)
