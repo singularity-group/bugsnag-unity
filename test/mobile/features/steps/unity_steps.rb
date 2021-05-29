@@ -39,6 +39,8 @@ end
 
 def press_at(x, y)
 
+  STDOUT.puts Maze.driver.window_size.inspect
+
   # TODO: PLAT-6654 Figure out why the scale is different on iOS
   factor = if Maze.driver.capabilities['os'] == 'ios'
              0.5
