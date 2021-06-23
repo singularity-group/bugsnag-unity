@@ -84,15 +84,25 @@ public class Main : MonoBehaviour
 
 	IEnumerator DoStuff()
 	{
-        OnLogClick();
-        OnLogWarningClick();
-        OnLogErrorClick();
-        OnLogExceptionClick();
-        OnBugsnagNotifyClick();
+		//OnLogClick();
+		//OnLogWarningClick();
+		//OnLogErrorClick();
+		//OnLogExceptionClick();
+		//OnBugsnagNotifyClick();
 
-        //OnOutOfMemoryClick();
+		var rnd = new System.Random();
+		var choice = rnd.Next(1, 3);
 
-        yield return new WaitForSeconds(5);
+		if (choice == 1)
+        {
+			OnAppHangClick();
+		}
+		else
+        {
+			Debug.Log("I decided not to hang this time");
+        }
+
+		yield return new WaitForSeconds(5);
 	}
 
 
