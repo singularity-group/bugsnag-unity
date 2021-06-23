@@ -1633,9 +1633,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   APIKey: 3ddb2bf15832b231db6834f2fda36992
   AutoNotify: 1
-  AutoDetectAnrs: 0
+  AutoDetectAnrs: 1
   AutoCaptureSessions: 1
-  NotifyLevel: 4
+  NotifyLevel: 3
   SecondsPerUniqueLog: 5
   MaximumBreadcrumbs: 25
   EnabledBreadcrumbTypes: -1

@@ -91,16 +91,29 @@ public class Main : MonoBehaviour
 		//OnBugsnagNotifyClick();
 
 		var rnd = new System.Random();
-		var choice = rnd.Next(1, 3);
 
+		//var choice = rnd.Next(1, 3);
+		var choice = rnd.Next(2, 6);
 		if (choice == 1)
         {
-			OnAppHangClick();
+			//OnAppHangClick();
+		}
+		else if (choice == 2)
+        {
+			OnNativeCppExceptionClick();
+        }
+		else if (choice == 3)
+		{
+			OnNativeSignalClick();
+		}
+		else if (choice == 4)
+		{
+			OnManagedCrashClick();
 		}
 		else
-        {
-			Debug.Log("I decided not to hang this time");
-        }
+		{
+			Debug.Log("I decided not to crash this time");
+		}
 
 		yield return new WaitForSeconds(5);
 	}
