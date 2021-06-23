@@ -4,6 +4,7 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UI;
 using BugsnagUnity;
+using System.Collections;
 using System.Collections.Generic;
 
 #if UNITY_EDITOR
@@ -78,14 +79,22 @@ public class Main : MonoBehaviour
 		OutOfMemory.GetComponent<Button>().onClick.AddListener(OnOutOfMemoryClick);
 		AppHang.GetComponent<Button>().onClick.AddListener(OnAppHangClick);
 
-		//OnLogClick();
-		//OnLogWarningClick();
-		//OnLogErrorClick();
-		//OnLogExceptionClick();
-		//OnBugsnagNotifyClick();
-
-		OnOutOfMemoryClick();
+		StartCoroutine("DoStuff");
 	}
+
+	IEnumerator DoStuff()
+	{
+        OnLogClick();
+        OnLogWarningClick();
+        OnLogErrorClick();
+        OnLogExceptionClick();
+        OnBugsnagNotifyClick();
+
+        //OnOutOfMemoryClick();
+
+        yield return new WaitForSeconds(5);
+	}
+
 
 	private void OnManagedCrashClick()
 	{
