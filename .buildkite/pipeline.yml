@@ -198,9 +198,9 @@ steps:
       queue: opensource-windows-unity
     env:
       UNITY_VERSION: "2017.4.40f1"
-    plugins:
-      artifacts#v1.2.0:
-        download:
+#    plugins:
+#      artifacts#v1.2.0:
+#        download:
     # TODO SKW Add these
     #          - Bugsnag.unitypackage
     #          - Bugsnag-with-android-64bit.unitypackage
