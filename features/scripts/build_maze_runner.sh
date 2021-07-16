@@ -16,7 +16,8 @@ if [ "$1" == "macos" ]; then
 elif [ "$1" == "windows" ]; then
   PLATFORM="Win64"
   set -m
-  UNITY_PATH="/c/Program Files/Unity/Hub/Editor/$UNITY_VERSION/Editor/Unity.exe"
+  # Assumes Buildkite agent is running under WSL Ubuntu
+  UNITY_PATH="/mnt/c/Program Files/Unity/Hub/Editor/$UNITY_VERSION/Editor/Unity.exe"
 elif [ "$1" == "webgl" ]; then
   PLATFORM="WebGL"
   if [ "$(uname)" == "Darwin" ]; then
