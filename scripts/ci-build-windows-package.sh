@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Using the artifacts plugin v1.3 on Windows, even under WSL, seems to break the whole step
+buildkite-agent artifact download "Bugsnag.unitypackage" .
+
 # Build the Windows fixture (assumes agent is running under WSL)
 ./features/scripts/build_maze_runner.sh windows
 CODE=$?
