@@ -39,6 +39,7 @@ pushd $SCRIPT_DIR
   popd
   pushd ../fixtures
     log_file="$package_path/unity.log"
+    echo "log_file: $log_file"
     project_path="$(pwd)/maze_runner"
 
     # Run unity and immediately exit afterwards, log all output
@@ -58,6 +59,8 @@ pushd $SCRIPT_DIR
     fi
 
     echo "Importing $package_path/Bugsnag.unitypackage into $project_path"
+    echo "command: $UNITY_PATH $DEFAULT_CLI_ARGS -projectPath $project_path -ignoreCompilerErrors -importPackage \"$package_path/Bugsnag.unitypackage\""
+
     "$UNITY_PATH" $DEFAULT_CLI_ARGS \
       -projectPath $project_path \
       -ignoreCompilerErrors \
