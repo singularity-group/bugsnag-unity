@@ -1,9 +1,9 @@
 #!/bin/bash
 pushd features/fixtures/maze_runner/build
   rm -rf MacOS
+  sha1sum MacOS-$UNITY_VERSION.zip
   unzip MacOS-$UNITY_VERSION.zip
-  # Ensure app is not marked as damaged
-  xattr -cr MacOS/Mazerunner.app
+  ls -lR
 popd
 bundle install
 sleep 3
