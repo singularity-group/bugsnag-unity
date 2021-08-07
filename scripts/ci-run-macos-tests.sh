@@ -6,5 +6,4 @@ pushd features/fixtures/maze_runner/build
   find ./MacOS -type f -print0 | xargs -0 sha1sum
 popd
 bundle install
-sleep 3
-bundle exec maze-runner --app=features/fixtures/maze_runner/build/MacOS/Mazerunner.app --os=macos features/desktop
+bundle exec maze-runner --app=features/fixtures/maze_runner/build/MacOS/Mazerunner.app --os=macos features/desktop/breadcrumbs.feature:3
