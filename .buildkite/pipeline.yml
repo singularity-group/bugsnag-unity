@@ -7,7 +7,7 @@ steps:
     key: 'build-artifacts'
     timeout_in_minutes: 30
     agents:
-      queue: opensource-mac-unity-jdk-11
+      queue: opensource-mac-unity
     env:
       UNITY_VERSION: "2017.4.40f1"
     commands:
