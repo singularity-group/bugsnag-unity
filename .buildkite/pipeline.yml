@@ -7,10 +7,11 @@ steps:
     key: 'build-artifacts'
     timeout_in_minutes: 30
     agents:
-      queue: opensource-mac-unity
+      queue: opensource-mac-unity-jdk-11
     env:
       UNITY_VERSION: "2017.4.40f1"
     commands:
+      - /bin/sh -c "java -version"
       - bundle install
       - bundle exec rake plugin:export
     artifact_paths:
